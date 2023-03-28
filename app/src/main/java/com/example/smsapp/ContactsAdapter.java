@@ -42,13 +42,19 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
+        //set text view
+        holder.textViewContactFirstName.setText(arrayListContacts.get(position).getFirstName());
+        holder.textViewContactLastName.setText(arrayListContacts.get(position).getLastName());
+
         //On click listener for the recycler view
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Toast.makeText(context,arrayListAllItem.get(position).getProductName()+"\tselected",Toast.LENGTH_SHORT).show();
-//                Intent intent = new Intent(context, ProductInDetailActivity.class);
-//                context.startActivity(intent);
+                Intent intent = new Intent(context, ContactInfoActivity.class);
+                intent.putExtra("contact firstName",arrayListContacts.get(position).getFirstName());
+                intent.putExtra("contact lastName",arrayListContacts.get(position).getLastName());
+                intent.putExtra("contact phoneNumber",arrayListContacts.get(position).getPhoneNumber());
+                context.startActivity(intent);
             }
         });
 
@@ -69,12 +75,16 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHo
 
         //Declaration
         private LinearLayout parent;
+        private TextView textViewContactFirstName, textViewContactLastName;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             //The container
             parent = itemView.findViewById(R.id.single_contact);
+
+            textViewContactFirstName = itemView.findViewById(R.id.text_view_contact_first_name);
+            textViewContactLastName = itemView.findViewById(R.id.text_view_contact_last_name);
         }
     }
 
