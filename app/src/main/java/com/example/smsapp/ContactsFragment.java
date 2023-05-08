@@ -31,11 +31,10 @@ public class ContactsFragment extends Fragment {
 
         //Dummy Data
         ArrayList<ContactsModel> arrayListAllContacts = new ArrayList<>();
-        arrayListAllContacts.add(new ContactsModel("Muhammed","Shijas","+918281652366"));
-        arrayListAllContacts.add(new ContactsModel("Muhammed","Zahir","+917012926735"));
-        arrayListAllContacts.add(new ContactsModel("Zahir","2","+919744089375"));
-        arrayListAllContacts.add(new ContactsModel("Test","1","+919810153260"));
-        arrayListAllContacts.add(new ContactsModel("test","2","0000"));
+
+        arrayListAllContacts.add(new ContactsModel("test","1","+0000"));
+        arrayListAllContacts.add(new ContactsModel("Test","2","0000"));
+        arrayListAllContacts.add(new ContactsModel("test","3","0000"));
 
         //recycler view initializing and setting
         ContactsAdapter adapter = new ContactsAdapter(getContext());

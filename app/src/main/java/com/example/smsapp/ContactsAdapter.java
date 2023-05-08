@@ -87,5 +87,4 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHo
             textViewContactLastName = itemView.findViewById(R.id.text_view_contact_last_name);
         }
     }
-
 }

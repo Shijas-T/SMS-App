@@ -22,7 +22,6 @@ public class ContactInfoActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Contact Info");
 
-
         textViewFirstName = findViewById(R.id.text_view_first_name);
         textViewLastName = findViewById(R.id.text_view_last_name);
         textViewPhoneNumber = findViewById(R.id.text_view_phone_no);
@@ -48,8 +47,5 @@ public class ContactInfoActivity extends AppCompatActivity {
 
             }
         });
-
-
-
     }
 }

@@ -67,7 +67,6 @@ public class ComposeActivity extends AppCompatActivity {
                  sendSMSMessage();
              }
          });
-
     }
 
     protected void sendSMSMessage() {
@@ -114,7 +113,6 @@ public class ComposeActivity extends AppCompatActivity {
                 }
             }
         }
-
     }
 
     // for twilio
@@ -142,6 +140,5 @@ public class ComposeActivity extends AppCompatActivity {
             Response response = client.newCall(request).execute();
             Log.d("Inside Compose Activity", "sendSms: "+ response.body().string());
         } catch (IOException e) { e.printStackTrace(); }
-
     }
 }
